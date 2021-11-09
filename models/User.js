@@ -25,36 +25,36 @@ const UserSchema = new mongoose.Schema({
     },
     coverPicture: {
         type: String,
-        default: ""
+        default: "",
     },
     followers: {
         type: Array,
         default: []
     },
-    followins: {
+    followings: {
         type: Array,
         default: []
     },
     isAdmin: {
         type: Boolean,
-        default: false
+        default: false,
     },
-    description: {
+    desc: {
         type: String,
         min: 50,
     },
-    // city: {
-    //     type: string,
-    //     max: 50,
-    // },
-    // from: {
-    //     type: string,
-    //     max: 50
-    // },
-    // relationship: {
-    //     type: Number,
-    //     enum: [1, 2, 3]
-    // }
+    city: {
+        type: String,
+        max: 50,
+    },
+    from: {
+        type: String,
+        max: 50
+    },
+    relationship: {
+        type: Number,
+        enum: [1, 2, 3]
+    }
 },
     { timestamps: true }
 )
